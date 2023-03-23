@@ -19,8 +19,17 @@ def clear_submit():
     st.session_state["submit"] = False
 
 
-st.set_page_config(page_title="KnowledgeGPT", page_icon="📖", layout="wide")
-st.header("📖KnowledgeGPT")
+st.set_page_config(page_title="DocGPT", page_icon="📖", layout="wide")
+st.header("📖DocGPT")
+
+
+hide_default_format = """
+       <style>
+       #MainMenu {visibility: hidden; }
+       footer {visibility: hidden;}
+       </style>
+       """
+st.markdown(hide_default_format, unsafe_allow_html=True)
 
 sidebar()
 
