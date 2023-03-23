@@ -15,17 +15,18 @@ def sidebar():
             "2. Upload a pdf, docx, or txt file📄\n"
             "3. Ask a question about the document💬\n"
         )
-        api_key_input = st.text_input(
-            "OpenAI API Key",
-            type="password",
-            placeholder="Paste your OpenAI API key here (sk-...)",
-            help="You can get your API key from https://platform.openai.com/account/api-keys.",  # noqa: E501
-            value=st.session_state.get("OPENAI_API_KEY", ""),
-        )
+#        api_key_input = st.text_input(
+#            "OpenAI API Key",
+#            type="password",
+#            placeholder="Paste your OpenAI API key here (sk-...)",
+#            help="You can get your API key from https://platform.openai.com/account/api-keys.",  # noqa: E501
+#            value=st.session_state.get("OPENAI_API_KEY", ""),
+#        )
 
-        if api_key_input:
-            set_openai_api_key(api_key_input)
-
+#        if api_key_input:
+#            set_openai_api_key(api_key_input)
+        set_openai_api_key(OPENAI_API_KEY)
+        
         st.markdown("---")
         st.markdown("# About")
         st.markdown(
