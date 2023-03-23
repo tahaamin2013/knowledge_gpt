@@ -26,7 +26,7 @@ def sidebar():
 
 #        if api_key_input:
 #            set_openai_api_key(api_key_input)
-        set_openai_api_key(OPENAI_API_KEY)
+        set_openai_api_key(st.secrets["OPENAI_API_KEY"])
         
         st.markdown("---")
         st.markdown("# About")
