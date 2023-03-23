@@ -11,9 +11,10 @@ def sidebar():
     with st.sidebar:
         st.markdown(
             "## How to use\n"
-            "1. Enter your [OpenAI API key](https://platform.openai.com/account/api-keys) below🔑\n"  # noqa: E501
-            "2. Upload a pdf, docx, or txt file📄\n"
-            "3. Ask a question about the document💬\n"
+#            "1. Enter your [OpenAI API key](https://platform.openai.com/account/api-keys) below🔑\n"  # noqa: E501
+            "1. Upload a pdf, docx, or txt file📄\n"
+            "2. Ask a question about the document💬\n"
+            "   Or you can ask DocGPT to give you some questions about the document💬\n"
         )
 #        api_key_input = st.text_input(
 #            "OpenAI API Key",
@@ -31,6 +32,7 @@ def sidebar():
         st.markdown(
             "📖DocGPT allows you to ask questions about your "
             "documents and get accurate answers with instant citations. "
+            "You can use it to research a paper or practice your exam. "
         )
         st.markdown(
             "This tool is a work in progress. "
