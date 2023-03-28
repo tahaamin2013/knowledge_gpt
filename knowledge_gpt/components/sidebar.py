@@ -12,8 +12,7 @@ def sidebar():
         st.markdown(
             "## How to use\n"
 #            "1. Enter your [OpenAI API key](https://platform.openai.com/account/api-keys) below🔑\n"  # noqa: E501
-            "1. Upload a pdf, docx, or txt file📄\n"
-            "Currently we don't support scanned PDF\n"
+            "1. Upload a pdf, docx, or txt file📄 (Currently we don't support scanned PDF)\n"
             "2. Ask a question about the document💬\n"
             "   Or you can ask DocGPT to give you some questions about the document💬\n"
         )
