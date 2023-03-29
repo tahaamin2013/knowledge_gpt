@@ -106,7 +106,7 @@ if button or st.session_state.get("submit"):
             st.error(e._message)
 
 # Construct the file path dynamically
-image_path = os.path.join(os.getcwd(), "DocGPT QR Code.jpg")
+image_path = os.path.abspath("docgpt.jpg")
 
 # Load the image
 img = Image.open(image_path)
