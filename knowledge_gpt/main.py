@@ -106,10 +106,11 @@ if button or st.session_state.get("submit"):
             st.error(e._message)
 
 # Construct the file path dynamically
-image_path = os.path.abspath("docgpt.jpg")
+#image_path = os.path.abspath("docgpt.jpg")
 
 # Load the image
-img = Image.open(image_path)
+#img = Image.open(image_path)
+img = Image.open("docgpt.jpg")
 
 # Display the image with text on top
 st.write("If you like the app, please donate to help pay the cost of OpenAI API")
