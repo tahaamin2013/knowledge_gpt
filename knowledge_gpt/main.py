@@ -1,5 +1,6 @@
 import streamlit as st
 from PIL import Image
+import os
 from openai.error import OpenAIError
 
 from knowledge_gpt.components.sidebar import sidebar
@@ -104,10 +105,14 @@ if button or st.session_state.get("submit"):
         except OpenAIError as e:
             st.error(e._message)
 
+# Construct the file path dynamically
+image_path = os.path.join(os.getcwd(), "DocGPT QR Code.jpg")
+
 # Load the image
-img = Image.open("DocGPT QR Code.jpg")
+img = Image.open(image_path)
 
 # Display the image with text on top
 st.write("If you like the app, please donate to help pay the cost of OpenAI API")
 st.write("如果你发现这个App有用，请帮助我们一起支付调用OpenAI API的费用")
-st.image(img, caption=None, use_column_width=True)            
+st.image(img, caption=None, use_column_width=True)
+
