@@ -34,9 +34,9 @@ st.markdown(hide_default_format, unsafe_allow_html=True)
 sidebar()
 
 uploaded_file = st.file_uploader(
-    "Upload a pdf, docx, or txt file",
+    "Upload a pdf, docx, or txt file 上传文件",
     type=["pdf", "docx", "txt"],
-    help="Scanned documents are not supported yet!",
+    help="Scanned documents are not supported yet! 扫描的文件不支持",
     on_change=clear_submit,
 )
 
@@ -59,7 +59,7 @@ if uploaded_file is not None:
     except OpenAIError as e:
         st.error(e._message)
 
-query = st.text_area("Ask a question about the document", on_change=clear_submit)
+query = st.text_area("Ask a question about the document 对文件提问题", on_change=clear_submit)
 with st.expander("Advanced Options"):
     show_all_chunks = st.checkbox("Show all chunks retrieved from vector search")
     show_full_doc = st.checkbox("Show parsed contents of the document")
@@ -69,7 +69,7 @@ if show_full_doc and doc:
         # Hack to get around st.markdown rendering LaTeX
         st.markdown(f"<p>{wrap_text_in_html(doc)}</p>", unsafe_allow_html=True)
 
-button = st.button("Submit")
+button = st.button("Submit 提交")
 if button or st.session_state.get("submit"):
     if not st.session_state.get("api_key_configured"):
         st.error("Please configure your OpenAI API key!")
