@@ -115,5 +115,5 @@ img = Image.open("knowledge_gpt/wechatpay.jpg")
 # Display the image with text on top
 st.write("If you like the app, please donate to help pay the cost of OpenAI API")
 st.write("如果你发现这个App有用，可以打赏我¥9.99帮助支付调用OpenAI API的费用")
-st.image(img, caption=None, witdth=100)
+st.image(img, caption=None, width=100)
 
