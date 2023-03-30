@@ -110,7 +110,7 @@ if button or st.session_state.get("submit"):
 
 # Load the image
 #img = Image.open(image_path)
-img = Image.open("knowledge_gpt/docgpt.jpg")
+img = Image.open("knowledge_gpt/wechatpay.jpg")
 
 # Display the image with text on top
 st.write("If you like the app, please donate to help pay the cost of OpenAI API")
