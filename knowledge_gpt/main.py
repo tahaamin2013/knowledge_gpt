@@ -114,7 +114,7 @@ if button or st.session_state.get("submit"):
 
 # Load the images
 image1 = Image.open("knowledge_gpt/wechatqrcode.jpg")
-image2 = Image.open("knowledge_gpt/paypalqrcode.jpg")
+image2 = Image.open("knowledge_gpt/paypalqrcode.png")
 
 # Display the image with text on top
 st.write("Each document costs about $1.5 for OpenAI API call. Please consider pay to keep this service alive")
