@@ -110,10 +110,26 @@ if button or st.session_state.get("submit"):
 
 # Load the image
 #img = Image.open(image_path)
-img = Image.open("knowledge_gpt/wechatpay.jpg")
+#img = Image.open("knowledge_gpt/wechatpay.jpg")
+
+# Load the images
+image1 = Image.open("knowledge_gpt/wechatqrcode.jpg")
+image2 = Image.open("knowledge_gpt/paypalqrcode.jpg")
 
 # Display the image with text on top
-st.write("If you like the app, please donate to help pay the cost of OpenAI API")
-st.write("如果你发现这个App有用，可以打赏我¥9.99帮助支付调用OpenAI API的费用")
-st.image(img, caption=None, width=200)
+st.write("Each document costs about $1.5 for OpenAI API call. Please consider pay to keep this service alive")
+st.write("每篇文章调用OpenAI API的费用约为¥10人民币，请帮助支付以便我们能够继续提供这个小程序")
+#st.image(img, caption=None, width=200)
+
+# Divide the app page into two columns
+col1, col2 = st.beta_columns(2)
+
+# Display the first image in the first column
+with col1:
+    st.image(image1, caption="WeChat Pay", width=200)
+
+# Display the second image in the second column
+with col2:
+    st.image(image2, caption="PayPal", width=200)
+
 
